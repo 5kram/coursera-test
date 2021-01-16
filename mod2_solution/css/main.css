@@ -1,0 +1,88 @@
+/********** Base styles **********/
+*, *:after, *:before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+h1 {
+    margin: 15px;
+    text-align: center;
+    font-size: 1.75em;
+}
+
+[class*="col-"] {
+    padding: 30px;
+    border: 1px solid black;
+    height: 120px;
+    overflow: auto;
+    position: relative;
+    box-sizing: border-box;
+    justify-content: center;
+    margin: 1%;
+}
+
+.col-1 {
+    background-color: teal;
+}
+
+.col-2 {
+    background-color: tomato;
+    
+}
+
+.col-3 {
+    background-color: #999999;
+}
+
+
+.row {
+    position: relative;
+    width: 100%;
+    
+}
+
+[class*="title-"] {
+    border: 1px solid black;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    clear: both;
+    background-color: cornflowerblue;
+    padding: 2px;
+    font-size: 1.25em;
+}
+
+/********** Large devices only **********/
+@media (min-width: 992px) {
+    .col-1, .col-2, .col-3 {
+        width: 31.33%;
+        float: left; 
+    }
+}
+
+/********** Medium devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+    .col-1, .col-2 {
+        width: 48%;
+        float:left;
+    }
+    .col-3 {
+        width: 98%;
+        float: left;
+    }
+}
+
+/*********** Small devices only *********/
+@media (max-width: 767px) {
+    .col-1, .col-2, .col-3 {
+        width: 98%;
+        float: left;
+    }
+}

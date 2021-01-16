@@ -1,30 +1,30 @@
-/********** Base styles **********/
+/* Responsive Cascading Style Sheet.
+ *
+ * Base Style.
+ */
 *, *:after, *:before {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    
-}
-
-body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    
 }
 
+/* Heading Layout.
+ */
 h1 {
     margin: 15px;
     text-align: center;
     font-size: 1.75em;
 }
 
+/* Column Layout.
+ */
 [class*="col-"] {
-    padding: 30px;
+    padding-top: 30px;
     border: 1px solid black;
     height: 120px;
     overflow: auto;
     position: relative;
-    box-sizing: border-box;
-    justify-content: center;
     margin: 1%;
 }
 
@@ -41,13 +41,8 @@ h1 {
     background-color: #999999;
 }
 
-
-.row {
-    position: relative;
-    width: 100%;
-    
-}
-
+/* Title Layout.
+ */
 [class*="title-"] {
     border: 1px solid black;
     position: absolute;
@@ -59,15 +54,19 @@ h1 {
     font-size: 1.25em;
 }
 
-/********** Large devices only **********/
+/* Responsive Design.
+ *
+ * Large Devices.
+ */
 @media (min-width: 992px) {
     .col-1, .col-2, .col-3 {
         width: 31.33%;
-        float: left; 
+        float: left;
     }
 }
 
-/********** Medium devices only **********/
+/* Medium Devices.
+ */
 @media (min-width: 768px) and (max-width: 991px) {
     .col-1, .col-2 {
         width: 48%;
@@ -79,7 +78,8 @@ h1 {
     }
 }
 
-/*********** Small devices only *********/
+/* Small Devices.
+ */
 @media (max-width: 767px) {
     .col-1, .col-2, .col-3 {
         width: 98%;
